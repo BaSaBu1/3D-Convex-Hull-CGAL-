@@ -1,0 +1,3 @@
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/test.dir
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/ALL_BUILD.dir
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/ZERO_CHECK.dir

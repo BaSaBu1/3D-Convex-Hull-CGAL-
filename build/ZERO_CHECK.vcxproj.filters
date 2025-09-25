@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Batsambuu\MAC\MATH 437\Mini Projects\3dConvexHull\build\CMakeFiles\67bf90e1541f4e77cd9586551089dd86\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{15807F77-0A5F-320B-B8C4-09AAB6B5D463}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

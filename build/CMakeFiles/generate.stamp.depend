@@ -1,0 +1,73 @@
+# CMake generation dependency list for this directory.
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/CMakeLists.txt
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/4.1.1/CMakeCCompiler.cmake
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/4.1.1/CMakeCXXCompiler.cmake
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/4.1.1/CMakeRCCompiler.cmake
+C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CMakeFiles/4.1.1/CMakeSystem.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeDependentOption.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Compiler/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindBoost.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCXXLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CMakeCommonLinkerInformation.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Internal/CheckSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Linker/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Linker/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Linker/MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Linker/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-Initialize.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-4.1/Modules/Platform/WindowsPaths.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost/BoostConfig.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost/BoostConfigVersion.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost/vcpkg-cmake-wrapper.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config-version.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-config.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/boost_headers/boost_headers-targets.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGALConfig-installation-dirs.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGALConfig.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGALConfigBuildVersion.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGALConfigVersion.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_Common.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_CreateSingleSourceCGALProgram.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_GeneratorSpecificSettings.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_Macros.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_SCM.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupBoost.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupCGALDependencies.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupGMP.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_SetupVLD.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_TweakFindBoost.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_VersionUtils.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_add_test.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_enable_end_of_configuration_hook.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_setup_target_dependencies.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/CGAL_target_use_TBB.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/FindGMP.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/FindGMPXX.cmake
+C:/Users/batsa/vcpkg/installed/x64-windows/share/cgal/FindMPFR.cmake
+C:/Users/batsa/vcpkg/scripts/buildsystems/vcpkg.cmake

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Batsambuu\MAC\MATH 437\Mini Projects\3dConvexHull\CGAL-6.0.2\examples\Triangulation_2\draw_triangulation_2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Batsambuu\MAC\MATH 437\Mini Projects\3dConvexHull\CGAL-6.0.2\examples\Triangulation_2\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{E6E0FD11-27E7-3F96-A821-585B8FC29CD3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

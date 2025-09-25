@@ -1,0 +1,10 @@
+^C:\BATSAMBUU\MAC\MATH 437\MINI PROJECTS\3DCONVEXHULL\BUILD\CMAKEFILES\67BF90E1541F4E77CD9586551089DD86\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull" "-BC:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Batsambuu/MAC/MATH 437/Mini Projects/3dConvexHull/build/CGALTest.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
