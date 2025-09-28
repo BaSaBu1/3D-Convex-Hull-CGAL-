@@ -16,61 +16,77 @@ typedef std::vector<Point_3> Points;
 
 int main()
 {
-  // Create output file in append mode to avoid overwriting
-  ofstream outputFile("convex_hull_results.txt", ios::app);
+  // Create CSV output file
+  ofstream outputFile("convex_hull_dataset.csv");
   if (!outputFile.is_open())
   {
     cerr << "Error: Could not create output file!" << endl;
     return 1;
   }
 
-  // Write headers to both console and file
-  outputFile << "\n"
-             << string(50, '=') << endl;
-  outputFile << "3D Convex Hull Analysis Results for Sphere" << endl;
-  outputFile << "===============================" << endl;
-  time_t currentTime = time(nullptr);
-  outputFile << "Generated on: " << ctime(&currentTime) << endl;
+  // Variable names
+  outputFile << "run_id,n_points,shape_type,convex_hull_vertices" << endl;
 
-  int runs = 10;
+  int runs = 100;
+  int run_id = 1;
 
-  int arr[13] = {10, 20, 50, 100, 200, 500, 1000, 2000, 5000, 10000, 20000, 50000, 100000};
-  for (auto n : arr)
+  vector<int> arr;
+  for (int i = 0; i < 20; i++)
   {
-    outputFile << "\n"
-               << string(30, '-') << endl;
-    outputFile << "Number of points (n) = " << n << endl;
-    outputFile << "Number of runs = " << runs << endl;
+    int n = round(10 * pow(10000.0, i / 19.0));
+    arr.push_back(n);
+  }
 
-    // Seed the random number generator with current time to get different points each run
-    CGAL::Random rng(static_cast<unsigned int>(time(nullptr)));
+  vector<string> shapes = {"sphere", "cube"};
 
-    for (int run = 1; run <= runs; run++)
+  for (const string &shape_type : shapes)
+  {
+    cout << "\n=== Processing " << shape_type << " shape ===" << endl;
+
+    for (auto n : arr)
     {
-      Points points;
-      CGAL::Random_points_in_sphere_3<Point_3> gen(5, rng);
+      cout << "Processing n = " << n << " points for " << shape_type << "..." << endl;
 
-      for (int i = 0; i < n; i++)
+      // Seed the random number generator with current time to get different points each run
+      CGAL::Random rng(static_cast<unsigned int>(time(nullptr) + run_id));
+
+      for (int run = 1; run <= runs; run++)
       {
-        points.push_back(*gen++);
-        // Optionally write points to file (uncomment next line if you want all points)
-        // outputFile << "Point " << i << ": (" << points[i].x() << ", " << points[i].y() << ", " << points[i].z() << ")" << endl;
+        Points points;
+
+        if (shape_type == "sphere")
+        {
+          CGAL::Random_points_in_sphere_3<Point_3> gen(1, rng);
+          for (int i = 0; i < n; i++)
+          {
+            points.push_back(*gen++);
+          }
+        }
+        else if (shape_type == "cube")
+        {
+          CGAL::Random_points_in_cube_3<Point_3> gen(1, rng);
+          for (int i = 0; i < n; i++)
+          {
+            points.push_back(*gen++);
+          }
+        }
+
+        Polyhedron_3 hull_poly;
+        CGAL::convex_hull_3(points.begin(), points.end(), hull_poly);
+
+        cout << "  Run " << run << ": " << hull_poly.size_of_vertices() << " vertices" << endl;
+
+        // Output CSV row
+        outputFile << run_id << "," << n << "," << shape_type << ","
+                   << hull_poly.size_of_vertices() << endl;
+
+        run_id++;
+        points.clear();
       }
-
-      // Create a polyhedron to hold the convex hull
-      Polyhedron_3 hull_poly;
-      CGAL::convex_hull_3(points.begin(), points.end(), hull_poly);
-
-      // Output to both console and file
-      cout << "Run " << run << ": " << hull_poly.size_of_vertices() << " vertices" << endl;
-      outputFile << hull_poly.size_of_vertices() << endl;
-      points.clear();
     }
   }
 
-  // Close the file
   outputFile.close();
-  cout << "\nResults appended to 'convex_hull_results.txt'" << endl;
 
   return 0;
 }
