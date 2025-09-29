@@ -1,0 +1,88 @@
+---
+title: "convex_hull_analysis"
+format: html
+---
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(ggplot2)
+```
+
+```{r}
+convex_hull <- read.csv("./build/convex_hull_dataset.csv")
+```
+
+```{r}
+convex_summary <- convex_hull %>%
+  group_by(shape_type, n_points) %>%
+  summarise(avg = mean(convex_hull_vertices),
+            sd = sd(convex_hull_vertices), .groups = "drop")
+```
+
+```{r}
+ggplot(convex_summary, aes(x = n_points, y = avg, color = shape_type)) +
+  geom_line(linewidth = 1) +             
+  geom_point(size = 2) +          
+  geom_errorbar(aes(ymin = avg - sd, ymax = avg + sd), width = 0.1, alpha = 0.5) +
+  scale_x_log10() +               
+  labs(x = "Number of Points (n)",
+       y = "Average Convex Hull Vertices",
+       color = "Shape") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "top")
+
+ggplot(convex_summary, aes(x = n_points, y = avg, color = shape_type)) +
+  geom_line(linewidth = 1) +             
+  geom_point(size = 2) +          
+  geom_errorbar(aes(ymin = avg - sd, ymax = avg + sd), width = 0.1, alpha = 0.5) +
+  scale_x_log10() +               
+  scale_y_log10() +             
+  labs(x = "Number of Points (n)",
+       y = "Average Convex Hull Vertices",
+       color = "Shape") +
+  theme_minimal(base_size = 14) +
+  theme(legend.position = "top")
+```
+
+
+
+```{r}
+ggplot(convex_summary, aes(x = n_points, y = avg, color = shape_type)) +
+  geom_point(size = 2) +
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE) +
+  scale_x_log10() +
+  scale_y_log10() +
+  labs(x = "Number of Points (n)",
+       y = "Average Convex Hull Vertices",
+       color = "Shape") +
+  theme_minimal(base_size = 14)
+```
+
+
+```{r}
+convex_summary <- convex_summary %>%
+  mutate(log_n = log10(n_points),
+         log_avg = log10(avg))
+
+models <- convex_summary %>%
+  group_by(shape_type) %>%
+  summarise(fit = list(lm(log_avg ~ log_n)), .groups = "drop") %>%
+  mutate(shape_type = as.character(shape_type))
+
+cube_model   <- models$fit[[which(models$shape_type == "cube")]]
+sphere_model <- models$fit[[which(models$shape_type == "sphere")]]
+
+coef(cube_model)
+10^(coef(cube_model)["(Intercept)"])
+
+coef(sphere_model)
+10^(coef(sphere_model)["(Intercept)"])
+```
+$$
+V_{\text{cube}} \approx 6.52 n^{0.32}
+$$
+$$
+V_{\text{sphere}} \approx 3.24 n^{0.58}
+$$
+
