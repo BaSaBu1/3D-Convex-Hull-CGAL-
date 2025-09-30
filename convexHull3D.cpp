@@ -1,3 +1,9 @@
+/**
+ * 3D Convex Hull Analysis
+ * Generates random points in spheres and cubes, computes convex hulls,
+ * and outputs results to CSV for statistical analysis.
+ */
+
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Polyhedron_3.h>
 #include <CGAL/convex_hull_3.h>
@@ -9,6 +15,7 @@
 #include <ctime>
 using namespace std;
 
+// CGAL type definitions
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Point_3 Point_3;
 typedef CGAL::Polyhedron_3<K> Polyhedron_3;
@@ -24,12 +31,14 @@ int main()
     return 1;
   }
 
-  // Variable names
+  // Write CSV header
   outputFile << "run_id,n_points,shape_type,convex_hull_vertices" << endl;
 
-  int runs = 100;
-  int run_id = 1;
+  // Configuration parameters
+  int runs = 100; // Number of runs per configuration
+  int run_id = 1; // Global run counter
 
+  // Generate logarithmically spaced point counts from 10 to 100,000
   vector<int> arr;
   for (int i = 0; i < 20; i++)
   {
@@ -54,6 +63,7 @@ int main()
       {
         Points points;
 
+        // Generate random points based on shape type
         if (shape_type == "sphere")
         {
           CGAL::Random_points_in_sphere_3<Point_3> gen(1, rng);
@@ -71,12 +81,13 @@ int main()
           }
         }
 
+        // Compute 3D convex hull
         Polyhedron_3 hull_poly;
         CGAL::convex_hull_3(points.begin(), points.end(), hull_poly);
 
         cout << "  Run " << run << ": " << hull_poly.size_of_vertices() << " vertices" << endl;
 
-        // Output CSV row
+        // Write results to CSV file
         outputFile << run_id << "," << n << "," << shape_type << ","
                    << hull_poly.size_of_vertices() << endl;
 
